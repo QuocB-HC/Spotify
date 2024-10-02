@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Spotify",
-    "slug": "Spotify",
+    "name": "project",
+    "slug": "project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,6 +11,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "extra": {
+      "expoClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com_ID",
+      "iosClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com",
+      "androidClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com",
+      "webClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com"
+    },
     "ios": {
       "supportsTablet": true
     },
@@ -18,8 +24,7 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.spotify"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

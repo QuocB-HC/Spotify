@@ -1,9 +1,19 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Alert } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import * as Google from 'expo-auth-session/providers/google';
+import Constants from 'expo-constants';
+import React, { useEffect } from 'react';
 
 function LoginScreen() {
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    expoClientId: Constants.expoConfig.extra.expoClientId,
+    iosClientId: Constants.expoConfig.extra.iosClientId,
+    androidClientId: Constants.expoConfig.extra.androidClientId,
+    webClientId: Constants.expoConfig.extra.webClientId,
+  });
+  
   return (
     <View style={styles.container}>
       <View>
@@ -20,9 +30,23 @@ function LoginScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity onPress={this._onPressButton} underlayColor="white">
-          <View style={styles.ggbtn}>
+          <View style={styles.abtn}>
+          <FontAwesome name="mobile-phone" size={24} color="white" />
+            <Text style={styles.abtn_text}>Continue with Phone Number</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={this._onPressButton} underlayColor="white">
+          <View style={styles.abtn}>
+          <FontAwesome name="apple" size={24} color="white" />
+            <Text style={styles.abtn_text}>Continue with Apple Account</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => promptAsync()} underlayColor="white" disabled={!request}>
+          <View style={styles.abtn}>
             <FontAwesome name="google" size={24} color="white" />
-            <Text style={styles.ggbtn_text}>Continue with Google</Text>
+            <Text style={styles.abtn_text}>Continue with Google</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -58,7 +82,7 @@ const styles = StyleSheet.create({
       marginVertical: 10,
   },
 
-  ggbtn: {
+  abtn: {
       backgroundColor: "#131624",
       padding: 10,
       marginLeft: "auto",
@@ -73,7 +97,7 @@ const styles = StyleSheet.create({
       borderWidth: 0.8,
   },
 
-  ggbtn_text: {
+  abtn_text: {
       //fontWeight: 500,
       color: "white",
       textAlign: "center",
