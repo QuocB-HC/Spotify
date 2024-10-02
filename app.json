@@ -12,10 +12,10 @@
       "backgroundColor": "#ffffff"
     },
     "extra": {
-      "expoClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com_ID",
-      "iosClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com",
-      "androidClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com",
-      "webClientId": "465483499501-0vp3jma35b0mpcohqd1ghodoopegmh5m.apps.googleusercontent.com"
+      "expoClientId": "146681506409-6fck000h73oj2ek5u4rtljb9vf452lbj.apps.googleusercontent.com",
+      "iosClientId": "146681506409-6fck000h73oj2ek5u4rtljb9vf452lbj.apps.googleusercontent.com",
+      "androidClientId": "146681506409-6fck000h73oj2ek5u4rtljb9vf452lbj.apps.googleusercontent.com",
+      "webClientId": "146681506409-6fck000h73oj2ek5u4rtljb9vf452lbj.apps.googleusercontent.com"
     },
     "ios": {
       "supportsTablet": true
@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.project"
     },
     "web": {
       "favicon": "./assets/favicon.png"
